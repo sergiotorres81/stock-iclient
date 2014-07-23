@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+	<!--  snippet for a simple input button
+		id : id for the component
+		action : actionBean
+		property : property of the action to be displayed
+		label : label for the input
+	-->
+	
+	<p:panelGrid columns="2" id="#{id}" rendered="#{label!=null?true:false}">
+		<p:outputLabel id="#{id}outputLabel" value="#{label}" />
+		<p:inputText id="#{id}inputText" value="#{bean[property]}" disabled="#{disabled}" rendered="#{bean[property]!=null}"/>
+		<p:inputText id="#{id}inputTextEmpty" value="#{messages.noValue}" disabled="#{disabled}" rendered="#{bean[property]==null}"/>
+	</p:panelGrid>
+
+</ui:composition>

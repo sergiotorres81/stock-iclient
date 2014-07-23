@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+	<h:form>
+		<p:menu >
+			<p:submenu label="#{messages.menu}">
+				<p:menuitem value="#{messages.soapClient}" action="#{controllerAction.changeVisibilitySoapClient}"/>
+				<p:menuitem value="#{messages.restClient}" action="#{controllerAction.changeVisibilityRestClient}"/>
+				<p:menuitem value="#{messages.shares}" action="#{controllerAction.changeVisibilityShares}"/>
+				<p:menuitem value="#{messages.salir}" action="#{loginAction.goLoginOut}"/>
+			</p:submenu>
+		</p:menu>
+	</h:form>
+</ui:composition>

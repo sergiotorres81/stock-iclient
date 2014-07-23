@@ -1,0 +1,24 @@
+#page{
+	width: 1024px;
+	margin: 0 auto;
+}
+
+#header{
+	width: 100%;
+	margin-bottom:16px;
+}
+
+#leftContent{
+	width: 20%;
+	position: left;
+}
+
+#content{
+	width: 80%;
+	position: right;
+	margin-bottom:16px;
+}
+
+#footer{
+	width: 100%;
+}

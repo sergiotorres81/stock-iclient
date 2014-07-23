@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	template="/pages/layout/template_login.xhtml">
+<ui:define name="content">
+	<h:form id="loginForm" >
+	<p:panelGrid columns="2" columnClasses="etiqueta column_left, column_right" styleClass="panel">
+		<p:outputLabel value="#{messages.usuario}" for="j_username"/>
+		<p:inputText value="#{loginAction.userName}" id="j_username" autocomplete="off"/>
+
+		<p:outputLabel value="#{messages.password}" for="j_password"/>
+		<p:password value="#{loginAction.password}" id="j_password" autocomplete="off"/>
+		<p:commandButton value="#{messages.login}" id="login"
+					action="#{loginAction.doLogin}"  >
+		</p:commandButton>
+		
+	</p:panelGrid>
+	</h:form>
+</ui:define>
+	
+</ui:composition>
+
