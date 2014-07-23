@@ -6,6 +6,7 @@ import org.codehaus.jackson.annotate.JsonProperty;
 
 public class LookupResult implements Serializable {
 	private static final long serialVersionUID = -9130852353708036084L;
+	private Integer id;
 	@JsonProperty("Symbol")
 	private String symbol;
 	@JsonProperty("Name")
@@ -46,6 +47,14 @@ public class LookupResult implements Serializable {
 
 	public void setExchange(String exchange) {
 		this.exchange = exchange;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
 }

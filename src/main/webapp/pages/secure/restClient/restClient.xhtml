@@ -24,20 +24,9 @@
 			<p:panelGrid columns="3">
 				<p:outputLabel value="#{messages.stockName}"></p:outputLabel>
 				<p:inputText value="#{restFulStockClientAction.stockName}" />
-				<p:commandButton value="Testing"
-						actionListener="#{restFulStockClientAction.lookUpStockInformation}" update="tableResults"/>
+				<p:commandButton value="#{messages.findSymbol}"
+						actionListener="#{restFulStockClientAction.lookUpStockInformationListener}" />
 			</p:panelGrid>
-			<p:dataTable var="var" value="#{restFulStockClientAction.stockSymbolList}" id="tableResults">	
-				<p:column headerText="#{messages.symbol}">
-					<h:outputText value="#{var.symbol}" />
-				</p:column>
-				<p:column headerText="#{messages.name}">
-					<h:outputText value="#{var.name}" />
-				</p:column>
-				<p:column headerText="#{messages.exchange}">
-					<h:outputText value="#{var.exchange}" />
-				</p:column>
-			</p:dataTable>		
 		</h:form>
 	</ui:define>
 </ui:composition>
