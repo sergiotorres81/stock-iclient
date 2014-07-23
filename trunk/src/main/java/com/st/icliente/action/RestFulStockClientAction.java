@@ -1,48 +1,55 @@
 package com.st.icliente.action;
 
-import java.util.HashMap;
-import java.util.Map;
-
+import org.primefaces.event.SelectEvent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Scope;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
-import org.springframework.web.client.RestTemplate;
+import org.springframework.util.CollectionUtils;
 
 import com.st.icliente.dto.LookUpResultListWrapper;
+import com.st.icliente.dto.LookupResult;
+import com.st.icliente.dto.Quote;
 import com.st.icliente.enums.SpringScope;
+import com.st.icliente.service.ISStock;
 
 @Component("restFulStockClientAction")
-@Scope(SpringScope.REQUEST)
+@Scope(SpringScope.VIEW)
 public class RestFulStockClientAction {
 
 	private Logger LOG = LoggerFactory
 			.getLogger(RestFulStockClientAction.class);
 	private String stockName;
+	private LookupResult chosenStock;
 	private LookUpResultListWrapper stockSymbolList;
-	private RestTemplate restTemplate = new RestTemplate();
+	private Quote stockQuote;
+	@Autowired
+	@Qualifier("stockService")
+	private ISStock stockService;
 
-	public void lookUpStockInformation() {
+	public void lookUpStockInformationListener() {
+		LOG.debug("Sending rest message for stock name : " + stockName);
+		stockSymbolList = stockService.lookupStock(stockName);
+		LOG.debug("Recovered symbols : "
+				+ (CollectionUtils.isEmpty(stockSymbolList) ? null
+						: stockSymbolList.size()));
+	}
 
-		LOG.debug("Sending rest message... ");
-		String url = "http://dev.markitondemand.com/Api/v2/Lookup/json?input={input}";
-		Map<String, String> vars = new HashMap<String, String>();
-		vars.put("input", stockName);
-		ResponseEntity<LookUpResultListWrapper> responseEntity = null;
+	public void onRowSelect(SelectEvent event) {
 		try {
-			responseEntity = restTemplate.getForEntity(url,
-					LookUpResultListWrapper.class, vars);
+			chosenStock = (LookupResult) event.getObject();
 		} catch (Exception e) {
-			LOG.error(e.getLocalizedMessage());
-			LOG.error(e.getMessage());
+			LOG.error("Cannot cast to LookupResult...");
 		}
-		if (responseEntity == null) {
-			LOG.debug("Problems... ");
+		if (chosenStock == null) {
+			LOG.debug("No stock selected ");
 		} else {
-			LOG.debug("Something received... " + responseEntity.getStatusCode());
-			stockSymbolList = responseEntity.getBody();
+			LOG.debug("Selected : " + chosenStock.getName());
+			stockQuote = stockService.quote(chosenStock.getSymbol());
 		}
+
 	}
 
 	public String getStockName() {
@@ -59,6 +66,22 @@ public class RestFulStockClientAction {
 
 	public void setStockSymbolList(LookUpResultListWrapper stockSymbolList) {
 		this.stockSymbolList = stockSymbolList;
+	}
+
+	public LookupResult getChosenStock() {
+		return chosenStock;
+	}
+
+	public void setChosenStock(LookupResult chosenStock) {
+		this.chosenStock = chosenStock;
+	}
+
+	public Quote getStockQuote() {
+		return stockQuote;
+	}
+
+	public void setStockQuote(Quote stockQuote) {
+		this.stockQuote = stockQuote;
 	}
 
 }

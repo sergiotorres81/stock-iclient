@@ -22,4 +22,8 @@ public class ControllerAction {
 		return "/pages/secure/soapClient/soapClient.xhtml?faces-redirect=true";
 	}
 
+	public String changeViewMarkitOnDemand() {
+		return "/pages/secure/restClient/markitOnDemand.xhtml?faces-redirect=true";
+	}
+
 }

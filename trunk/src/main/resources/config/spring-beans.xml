@@ -10,4 +10,14 @@
 	<context:component-scan base-package="com.st.icliente.action"/>
 	<context:component-scan base-package="com.st.icliente.service"/>
 	<context:component-scan base-package="com.st.icliente.manager"/>
+	
+	<bean class="org.springframework.beans.factory.config.CustomScopeConfigurer">
+        <property name="scopes">
+            <map>
+                <entry key="view">
+                    <bean class="com.st.icliente.spring.scope.ViewScope"/>
+                </entry>
+            </map>
+        </property>
+    </bean>
 </beans>

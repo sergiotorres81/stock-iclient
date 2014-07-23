@@ -5,8 +5,9 @@
 	xmlns:p="http://primefaces.org/ui"
 	xmlns:ui="http://java.sun.com/jsf/facelets">
 	<h:form>
-		<p:menu >
+		<p:menu  >
 			<p:submenu label="#{messages.menu}">
+				<p:menuitem value="#{messages.markitOnDemand}" action="#{controllerAction.changeViewMarkitOnDemand}"/>
 				<p:menuitem value="#{messages.soapClient}" action="#{controllerAction.changeVisibilitySoapClient}"/>
 				<p:menuitem value="#{messages.restClient}" action="#{controllerAction.changeVisibilityRestClient}"/>
 				<p:menuitem value="#{messages.shares}" action="#{controllerAction.changeVisibilityShares}"/>
