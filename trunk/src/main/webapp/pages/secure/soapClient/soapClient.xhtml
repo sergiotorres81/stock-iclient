@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	template="/pages/layout/template.xhtml">
+	<ui:define name="content">
+		<h:form>
+			<p:panelGrid columns="5">
+				<p:outputLabel value="#{messages.messageType}" />
+				<p:outputLabel value="#{messages.expedientId}" />
+				<p:outputLabel value="#{messages.bankId}" />
+				<p:outputLabel value="#{messages.sendMessage}" />
+				<p:outputLabel value="#{messages.result}" />
+
+				<p:outputLabel value="#{messages.enviarMensajeExisteExpediente}" />
+				<p:inputText value="#{soapClientAction.operacionId}"/>
+				<p:inputText value="#{soapClientAction.bancoId}" />
+				<ui:include src="/pages/components/button.xhtml">
+					<ui:param name="id" value="firstButtonId" />
+					<ui:param name="value" value="sendMessage" />
+					<ui:param name="update" value="existExpedient" />
+					<ui:param name="bean" value="#{soapClientAction}" />
+					<ui:param name="listener" value="listenerExpedientExist" />
+				</ui:include>
+				<ui:include src="/pages/components/boolean.xhtml">
+					<ui:param name="id" value="existExpedient" />
+					<ui:param name="value" value="#{soapClientAction.messageIsExisteExpediente}" />			
+				</ui:include>
+			</p:panelGrid>
+		</h:form>
+	</ui:define>
+</ui:composition>

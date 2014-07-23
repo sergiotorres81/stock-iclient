@@ -1,0 +1,68 @@
+#document .flexo_sprite {
+	display:inline-block;
+	overflow: hidden;
+	padding:0;
+	border:0;
+	background-repeat: no-repeat;
+	background-image: url(./flexoSprites.png);
+	background-color:transparent;
+}
+
+#document .flexo_sprite_0030{ background-position: 0 0; width: 180px; height: 60px; } 
+#document .flexo_sprite_0030mini{ background-position: 0 -62px; width: 135px; height: 54px; } 
+#document .flexo_sprite_0049{ background-position: 0 -118px; width: 180px; height: 95px; } 
+#document .flexo_sprite_0049mini{ background-position: 0 -215px; width: 135px; height: 54px; } 
+#document .flexo_sprite_0065{ background-position: 0 -271px; width: 180px; height: 60px; } 
+#document .flexo_sprite_0065mini{ background-position: 0 -333px; width: 135px; height: 54px; }
+#document .flexo_sprite_0081{ background-position: 0 -271px; width: 180px; height: 60px; } 
+#document .flexo_sprite_0081mini{ background-position: 0 -2310px; width: 135px; height: 54px; }
+#document .flexo_sprite_0115{ background-position: 0 -2226px; width: 180px; height: 60px; } 
+#document .flexo_sprite_0115mini{ background-position: 0 -2266px; width: 135px; height: 54px; }
+#document .flexo_sprite_0128{ background-position: 0 -389px; width: 180px; height: 60px; } 
+#document .flexo_sprite_0128mini{ background-position: 0 -451px; width: 135px; height: 54px; } 
+#document .flexo_sprite_0182{ background-position: 0 -507px; width: 180px; height: 60px; } 
+#document .flexo_sprite_0182mini{ background-position: 0 -569px; width: 135px; height: 54px; } 
+#document .flexo_sprite_0227{ background-position: 0 -625px; width: 180px; height: 80px; } 
+#document .flexo_sprite_0227mini{ background-position: 0 -707px; width: 135px; height: 54px; } 
+#document .flexo_sprite_0490{ background-position: 0 -763px; width: 190px; height: 75px; } 
+#document .flexo_sprite_0490mini{ background-position: 0 -840px; width: 135px; height: 54px; } 
+#document .flexo_sprite_1465{ background-position: 0 -896px; width: 180px; height: 60px; } 
+#document .flexo_sprite_1465mini{ background-position: 0 -958px; width: 135px; height: 54px; } 
+#document .flexo_sprite_2013{ background-position: 0 -1014px; width: 204px; height: 75px; } 
+#document .flexo_sprite_2013mini{ background-position: 0 -1091px; width: 135px; height: 54px; } 
+#document .flexo_sprite_2038{ background-position: 0 -1147px; width: 190px; height: 76px; } 
+#document .flexo_sprite_2038mini{ background-position: 0 -1225px; width: 135px; height: 54px; }
+#document .flexo_sprite_2048{ background-position: 0 -2056px; width: 190px; height: 76px; }
+#document .flexo_sprite_2048mini{ background-position: 0 -2141px; width: 117px; height: 61px; }
+#document .flexo_sprite_2054{ background-position: 0 -1281px; width: 147px; height: 49px; } 
+#document .flexo_sprite_2054mini{ background-position: 0 -1332px; width: 135px; height: 54px; } 
+#document .flexo_sprite_2077{ background-position: 0 -1388px; width: 201px; height: 75px; } 
+#document .flexo_sprite_2077mini{ background-position: 0 -1465px; width: 135px; height: 54px; } 
+#document .flexo_sprite_2085{ background-position: 0 -1521px; width: 180px; height: 60px; } 
+#document .flexo_sprite_2085mini{ background-position: 0 -1583px; width: 135px; height: 54px; } 
+#document .flexo_sprite_2090{ background-position: 0 -1639px; width: 180px; height: 135px; } 
+#document .flexo_sprite_2090mini{ background-position: 0 -1776px; width: 135px; height: 54px; } 
+#document .flexo_sprite_2100{ background-position: 0 -1832px; width: 180px; height: 60px; } 
+#document .flexo_sprite_2100mini{ background-position: 0 -1894px; width: 135px; height: 54px; } 
+#document .flexo_sprite_addFile14{ background-position: 0 -1950px; width: 14px; height: 14px; } 
+#document .flexo_sprite_cajacanarias{ background-position: 0 -1966px; width: 180px; height: 68px; } 
+#document .flexo_sprite_delete{ background-position: -206px 0; width: 14px; height: 14px; } 
+#document .flexo_sprite_dialog-error{ background-position: -206px -16px; width: 48px; height: 48px; } 
+#document .flexo_sprite_dialog-help{ background-position: -206px -66px; width: 48px; height: 48px; } 
+#document .flexo_sprite_dialog-information{ background-position: -206px -116px; width: 48px; height: 48px; } 
+#document .flexo_sprite_dialog-warning{ background-position: -206px -166px; width: 48px; height: 48px; } 
+#document .flexo_sprite_eprevia{ background-position: -206px -216px; width: 241px; height: 70px; } 
+#document .flexo_sprite_ibanesto{ background-position: -206px -288px; width: 239px; height: 94px; } 
+#document .flexo_sprite_indra_bmb{ background-position: -206px -384px; width: 180px; height: 41px; } 
+#document .flexo_sprite_ipost{ background-position: -206px -427px; width: 206px; height: 70px; } 
+#document .flexo_sprite_rodobens{ background-position: -206px -499px; width: 184px; height: 79px; } 
+#document .flexo_sprite_salir{ background-position: -206px -580px; width: 21px; height: 21px; } 
+#document .flexo_sprite_subir{ background-position: -206px -603px; width: 14px; height: 14px; } 
+#document .flexo_sprite_icliente{ background-position: -206px -621px; width: 216px; height: 70px; } 
+
+
+
+
+
+
+

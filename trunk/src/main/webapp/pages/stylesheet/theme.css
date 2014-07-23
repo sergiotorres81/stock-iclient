@@ -1,0 +1,2201 @@
+body {
+	color: #000;
+	font-family: Arial, Verdana, sans-serif;
+	font-size: 11px;
+	margin: 0px;
+	height: 100%;
+	width: 100%; 
+}
+
+#document #content_login {
+	width:320px;
+	text-align: center;
+	margin:140px auto 0;
+}
+
+#document #content_delegaciones {
+	width:640px;
+	text-align: center;
+	margin:100px auto 0;
+}
+
+#document #content_centros_multi {
+	width:900px;
+	text-align: center;
+	margin:20px auto 0;
+}
+
+.ibtimRow, .ibtimRow *, .fila_impar, .fila_par, .fila_impar *, .fila_par * {
+	cursor: pointer;
+	*cursor: hand;
+}
+
+.fila_impar_lectura, .fila_par_lectura, .fila_impar_lectura *, .fila_par_lectura * {
+	cursor: default;
+}
+
+.fila_impar_lectura *, .fila_par_lectura * {
+	cursor: default;
+}
+
+/*
+ * Sobreescribe la fila anterior para un correcto comportamiento con los botones.
+ */
+.fila_impar_lectura .columnaAccion *,
+.fila_par_lectura .columnaAccion * {
+	cursor: pointer;
+	*cursor: hand;
+}
+
+.fila_par,
+#document .fila_par_lectura,
+#document .seleccionableCeldas .fila_par:hover,
+#document .seleccionableCeldas .fila_par_lectura:hover  {
+	background: #F8F8F8;
+}
+
+.fila_impar,
+#document .fila_impar_lectura,
+#document .seleccionableCeldas .fila_impar:hover,
+#document .seleccionableCeldas .fila_impar_lectura:hover,
+#document .columna_color {
+	background: #DDD;
+}
+
+/*listado de tareas pendientes*/
+#document .procedencia1VIP {
+	background:#f29fbe;
+	color:white;
+}
+
+#document .procedencia2EXC {
+	background:#6faaf2;
+	color:white;
+}
+
+#document .procedencia3SUC {
+}
+
+#document .procedencia4AGE {
+}
+
+
+/*listado de tareas pendientes Barclays*/
+#document .procedencia1SUC {
+}
+
+#document .procedencia2PRE {
+}
+
+#document .procedencia3VIP {
+	background:#FF7777;
+	color:white;
+}
+
+#document .procedencia4EMP {
+}
+
+
+/* Listado Alta Expedientes ING*/
+#document .procedencia1 {
+	background:#FF7777;
+	color:white;
+}
+
+
+#document .ibtimRow:hover,
+#document .fila_impar:hover,
+#document .fila_impar_lectura:hover,
+#document .fila_par:hover,
+#document .fila_par_lectura:hover,
+#document .seleccionableCeldas td:hover,
+#document .rich-table .rowHover {
+	background-color: #FFFF88;
+}
+
+#document .fila_seleccionada {
+	background-color: #88FFFF;
+}
+
+#document input[type="text"]:focus,
+#document input[type="password"]:focus,
+#document textarea:focus {
+	border:2px solid;
+}
+
+#document .columnaGrupo1 {
+	text-align:left;
+	padding:10px;
+	font-size:14pt;
+}
+
+#document .columnaGrupo2 {
+	text-align:left;
+	padding:5px;
+	font-size:12pt;
+}
+
+#document #contenido {			
+	background-color: #fff;
+}
+
+a:active,a:link,a:visited, #document .dr-tbpnl-tb {
+	color:#000;
+}
+
+#document a {
+	text-decoration:none;
+}
+
+#document a:hover {
+	color:#FFFF88;
+}
+
+#panelPrincipal a.enlaceSeleccionado:hover {
+	color:#900000;
+}
+
+#document .rich-tab-header {
+	padding:2px 5px;
+}
+
+#document .dr-tbpnl-tb:hover,
+#document .rich-tab-header:hover,
+#document .ibtim-tabPanel a:hover {
+ 	color:black;
+}
+
+.rich-table {
+	width: 100%;
+	font-weight: normal;
+}
+
+#document .rich-table-headercell {
+	text-align: left;	
+}
+
+#document div.dr-table-footer {
+	padding: 4px;
+}
+
+h1 {
+	font-family: Arial, sans-serif;
+	font-size: 1.6em;
+	margin-top: 0;
+}
+
+h2 {
+	font-family: Arial, sans-serif;
+	font-size: 1.4em;
+	margin-top: 0;
+}
+
+.columnHeader:hover {
+	color: #FF6600;
+}
+
+.importante {
+	font-weight: bold;
+	color:#000;
+}
+
+.textoNegro{
+	color: black;
+}
+
+.textoLlamativoGris{
+	font-style:italic;
+	color: silver;
+	text-transform: uppercase;
+}
+
+.message {
+	border: 1px solid #FFCC00;
+	padding: 5px;
+	margin: 5px 0;
+	background-color: #F0F8FF;
+	font-size: 12px;
+}
+
+.fondoGrisClaro{
+	background-color:#E5E5E5;
+}
+
+#document .errors {
+	color: red;
+	vertical-align: middle;
+}
+
+#document .grave {
+	color: red;
+}
+
+#document .mensajes {
+	display: block;
+	padding: 5px;
+	margin: 5px 0;
+}
+
+#document .mensajes .rich-messages-marker {
+	margin-right: 5px;
+}
+
+.logo_flexo {
+	font-size: 40px;
+	font-family: Times, sans-serif;
+	font-weight: bold;
+}
+
+/*---------------------------------------------------------------------------------
+#-                  			PLANTILLAS TASACIONES
+#---------------------------------------------------------------------------------*/
+#document body,#document div,#document span,#document dd,#document dt,
+#document dl,#document img,#document ul,#document ol,#document li,#document p,
+#document h1,#document h2,#document h3,#document h4,#document h5,#document form,
+#document hr,#document fieldset {
+	margin: 0;
+	padding: 0;
+}
+
+#document .listaDocumentos li {
+	margin-left: 20px;
+}
+
+#document #sidebar, #document #content {
+	margin-top:5px;
+}
+
+#document #sidebar {
+	width: 250px;
+	float: left;
+	padding:0 5px;
+}
+
+#document #content {
+	clear: right;
+	width: 700px;
+	float: left;
+	padding: 8px;
+	font-weight: bold;
+	border: 1px solid #ACBECE;
+}
+
+#document #footer {
+	clear: both;
+	width: 100%;
+	margin-top: 20px;
+	float: left;
+	text-align: center;
+	font-family: monospace;
+}
+
+#document .panel {
+	width: 100%;
+	margin-left: 0;
+	padding-left: 0;
+	cellspacing: 0;
+	cellpadding: 0;
+}
+
+/*--------------------------------------------------------------*/
+#document .label {
+	width: 115px;
+	margin: 3px 0;
+	font-weight: bold;
+	text-align: left;
+	color: #000;
+	vertical-align:top;
+}
+
+.label3 {
+	width: 210px;
+	font-weight: bold;
+	float: left;
+	text-align: left;
+	color: #000;
+	vertical-align:top;
+}
+
+.labelSinAnchura {
+	font-weight: bold;
+	float: left;
+	text-align: left;
+	color: #000;
+	vertical-align:top;
+}
+
+#document .output,
+#document .textarea {
+	margin: 3px 0;
+	text-align: left;
+	font-weight: normal;
+}
+
+#document .output select {
+	min-width:145px;
+}
+
+.texto_border_down {
+	border: 1px;
+}
+
+/*#--------------------------------------------------------------*/
+#document .tabla_buscador {
+	width: 250px;
+	margin: 3px 0;
+	padding-left: 10px;
+	font-weight: normal;
+	border: 1px;
+}
+
+/* Esta regla define que todas las imagenes dentro de un enlace no tengan bordes */
+a img {
+	border: none;
+}
+
+/*#--------------------------------------------------------------*/
+/*				PANELES											 */
+/*#--------------------------------------------------------------*/
+/*Añade un padding en el cuerpo de todos los paneles */
+#document .rich-panel-body, #document .rich-stglpanel-body {
+	padding: 10px;
+}
+
+#document .rich-panel,
+#document .rich-stglpanel,
+#document .topSeparated,
+#document .rich-toolbar,
+#document .rich-tabpanel {
+	display:block;
+	margin-top:10px;
+}
+
+#document .bottomSeparated{
+	margin-bottom:10px;
+}
+
+/*Sobreescribe la regla anterior para un correcto funcionamiento en elementos basados en tablas*/
+#document .rich-tabpanel,
+#document .rich-toolbar,
+#document table.topSeparated {
+	display:table;
+}
+
+#document .topUnited,
+#document .textoCabecera,
+#document .paginador, 
+#document .rich-panel-body > :first-child ,
+#document .rich-panel-body > :first-child :first-child,
+#document .rich-stglpanel-body > :first-child,
+#document .rich-stglpanel-body > :first-child :first-child,  
+#document .rich-tabpanel-content > :first-child,
+#document .rich-tabpanel-content > :first-child :first-child {
+	margin-top:0;
+}
+
+#document .rich-panel, #document .rich-stglpanel {
+	font-weight: normal;
+}
+
+#document .rich-panel-header, #document .rich-stglpanel-header {
+	font-size:1.2em;
+}
+
+
+/*#--------------------------------------------------------------*/
+/*				TEXTAREAS										 */
+/*#--------------------------------------------------------------*/
+#document .textarea * {
+	width: 460px;
+	height: 60px;
+	font-family: Arial, sans-serif;
+}
+
+#document .textareaReducido * {
+	width: 225px;
+	height: 30px;
+	font-family: Arial, sans-serif;
+}
+
+#document .textareaReducido * {
+	height: 60px;
+}
+
+#document .textareaMediano * {
+	width: 350px;
+	height: 60px;
+	font-family: Arial, sans-serif;
+}
+
+#document .textareaAlturaReducida * {
+	height: 30px;
+	width: 460px;
+	font-family: Arial, sans-serif;
+}
+
+#document .textareaAlturaReducidaAnchuraNoraml * {
+	height: 30px;
+	width: 560px;
+	font-family: Arial, sans-serif;
+}
+
+#document .textareaAlturaMenosReducida * {
+	height: 40px;
+	width: 460px;
+	font-family: Arial, sans-serif;
+}
+
+/*Esta regla no se aplicará en IE7 y anteriores*/
+body#document textarea[readonly="readonly"] {
+	background: #CCC none;
+	cursor: default;
+}
+
+/*Simula el comportamiento de la regla anterior para navegadores de versiones
+ * anteriores (IE6, IE7). Esta regla sobreescribe la anterior
+ */
+body#document textarea.textarea_lectura, .regionLectura {
+	background: #CCC none;
+	cursor: default;
+}
+
+/*#---------------------------------------------------------------------------------
+#-                  			columnas
+#---------------------------------------------------------------------------------*/
+.columnHeaderSimple{
+	background-color:#EAF0F8;
+	color:#000000;
+}
+.columnTextoNombre{
+	width:  180px;	
+}
+
+.columnTextoCorto{
+	width:  60px;	
+}
+
+.columnDniNif{
+	width:  120px;	
+}
+
+.columnDniNifCorto{
+	width:  70px;	
+}
+
+.column_right {
+	text-align:right;
+}
+
+.column_left {
+	text-align:left;
+}
+
+.column_center {
+	text-align: center;
+}
+
+.column_ID {
+	width: 36px;
+	text-align: right;
+}
+
+.column_Comunicacion_ID {
+	width: 30px;
+	text-align: center;
+}
+
+.column_CENTRO_ID {
+	width: 36px;
+}
+
+.column_BANCO {
+	width: 30px;
+	text-align: left;
+}
+
+
+.column_CD, .column_CODNUMERICO {
+	width: 13px;
+	text-align: left;
+}
+
+.column_REFBANCARIA {
+	width: 85px;
+	text-align: left;
+}
+
+.column_REFBANCARIA_LARGA {
+	width: 111px;
+	text-align: center;
+}
+
+.column_REFBANCARIA_10 {
+	width: 55px;
+	text-align: left;
+}
+
+.column_FECHA {
+	width: 52px;
+	text-align: left;
+}
+.column_FECHA_MEDIA {
+	width: 57px;
+	text-align: left;
+}
+
+.column_ESTADO {
+	width:200px;
+	text-align: left;
+}
+
+.column_ESTADO_PEQUEÑO {
+	width:100px;
+	text-align: left;
+}
+
+.column_TAREA {
+	width: 90px;
+	text-align: left;
+}
+
+.column_INTERVINIENTE {
+	width: 135px;
+	text-align: left;
+}
+
+.column_FECHAINCIDENCIA {
+	width: 95px;
+	text-align: center;
+}
+
+.column_FECHAALTAAUTOMATICA {
+	width: 96px;
+	text-align: center;
+}
+
+.column_FECHAALTAMANUAL {
+	width: 55px;
+	text-align: center;
+}
+
+.column_FECHASOLICITUD {
+	width: 96px;
+	text-align: center;
+}
+
+.column_FECHAREVISION {
+	width: 96px;
+	text-align: center;
+}
+
+.column_NUMERO {
+	width: 13px;
+	text-align: right;
+}
+
+.column_LOGIN {
+	width: 13px;
+	text-align: right;
+}
+
+.column_TIPO {
+	width: 13px;
+	text-align: right;
+}
+
+.column_TITULAR {
+	width: 135px;
+	text-align: left;
+}
+
+.column_FECHAGENERACION {
+	width: 55px;
+	text-align: center;
+}
+
+.column_FECHAREALIZACION {
+	width: 96px;
+	text-align: center;
+}
+
+.column_TITULARPRINCIPAL {
+	width: 135px;
+	text-align: left;
+}
+
+.column_NUMERORECLAMACIONES {
+	width: 58px;
+	text-align: right;
+}
+
+.column_FECHAULTIMARECLAMACION {
+	width: 96px;
+	text-align: center;
+}
+
+.column_FECHAENTRADABOTE {
+	width: 52px;
+	text-align: center;
+}
+
+.column_FECHAEVALUACION {
+	width: 96px;
+	text-align: center;
+}
+
+.column_FECHAELEVACION {
+	width: 96px;
+	text-align: center;
+}
+
+.column_FECHAVIABLE {
+	width: 52px;
+	text-align: center;
+}
+
+.column_DESTINATARIO {
+	width: 135px;
+	text-align: left;
+}
+
+.column_FECHAMAIL {
+	width: 96px;
+	text-align: center;
+}
+
+.column_TIPO {
+	width: 90px;
+	text-align: left;
+}
+
+.column_FECHALLAMADA {
+	width: 96px;
+	text-align: center;
+}
+
+
+.column_CCC{
+	width: 130px;
+	text-align: left;
+}
+
+.column_FECHABAJA {
+	width: 52px;
+	text-align: center;
+}
+
+.column_CHECK {
+	width: 22px;
+}
+
+.column_HORA {
+	width: 30px;
+}
+
+.column_NOMBREPLANTILLA {
+	width: 200px;
+	text-align: left;
+}
+
+.column_TIPODOCUMENTO {
+	width: 100px;
+	text-align: left;
+}
+
+.column_ICONO {
+	width: 10px;
+	text-align: left;
+}
+
+.column_25_center {
+	width: 25%;
+	margin-left: 0px;
+	cellspacing: 0;
+	cellpadding: 0;
+	text-align: center;
+}
+
+.column_25_inicio {
+	width: 25%;
+	margin-left: 0px;
+	cellspacing: 0;
+	cellpadding: 0;
+	text-align: left;
+}
+
+.column_50_center {
+	width: 50%;
+	margin-left: 0px;
+	cellspacing: 0;
+	cellpadding: 0;
+	/*text-align: center;*/
+}
+
+.column_50_inicio {
+	width: 50%;
+	margin-left: 0px;
+	cellspacing: 0;
+	cellpadding: 0;
+	text-align: left;
+}
+
+.column_100 {
+	width: 100%;
+	margin-left: 0;
+	cellspacing: 0;
+	cellpadding: 0;
+	text-align: left;
+}
+
+.column_33_inicio {
+	width: 33%;
+	margin-left: 0px;
+	cellspacing: 0;
+	cellpadding: 0;
+	text-align: left;
+}
+
+.column_33_center {
+	width: 33%;
+	margin-left: 0px;
+	cellspacing: 0;
+	cellpadding: 0;
+	text-align: center;
+}
+
+.column_66_inicio {
+	width: 66%;
+	margin-left: 0px;
+	cellspacing: 0;
+	cellpadding: 0;
+	text-align: left;
+}
+
+.column_66_center {
+	width: 66%;
+	margin-left: 0px;
+	cellspacing: 0;
+	cellpadding: 0;
+	text-align: center;
+}
+
+.column_60_inicio {
+	width: 60%;
+	margin-left: 0px;
+	cellspacing: 0;
+	cellpadding: 0;
+	text-align: left;
+}
+.column_40_inicio {
+	width: 40%;
+	margin-left: 0px;
+	cellspacing: 0;
+	cellpadding: 0;
+	text-align: left;
+}
+.column_20_inicio {
+	width: 20%;
+	margin-left: 0px;
+	cellspacing: 0;
+	cellpadding: 0;
+	text-align: left;
+}
+
+.column_10_inicio {
+	width: 10%;
+	margin-left: 0px;
+	cellspacing: 0;
+	cellpadding: 0;
+	text-align: left;
+}
+
+.column_10_center {
+	width: 10%;
+	margin-left: 0px;
+	cellspacing: 0;
+	cellpadding: 0;
+	text-align: center;
+}
+
+.column_50_inicio{
+	width: 50%;
+	margin-left: 0px;
+	cellspacing: 0;
+	cellpadding: 0;
+	text-align: left;
+}
+
+.column_80_inicio {
+	width: 80%;
+	margin-left: 0px;
+	cellspacing: 0;
+	cellpadding: 0;
+	text-align: left;
+}
+
+.column_izq {	
+	margin-left: 0px;
+	cellspacing: 0;
+	cellpadding: 0;
+	text-align: left;
+}
+
+.columnaTexto60 {
+	width: 220px;
+}
+
+.accionSimple {
+	width: 22px;
+}
+
+.accionDoble {
+	width: 44px;
+}
+
+.accionTriple {
+	width: 66px;
+}
+
+#document .columnaAccion {
+	padding:2px;
+}
+
+#document .columnaAccionCentrada {
+	padding:2px;
+	text-align: center;
+}
+
+#document .columnaAccion .flexo_sprite,
+#document .columnaAccion .ss_sprite {
+	display:block;
+	float:right;
+	margin: 0 2px;
+}
+
+#document .columnaAccion span a {
+	margin:0;
+}
+
+.columnaOperacionId, .column_COD_OFICINA {
+	width: 40px;
+	text-align: left;
+}
+
+.columnaImagenListaControl{
+	width: 10px;
+	text-align: left;
+}
+
+.columna_accionSimple_nombre {
+	width: 10px;
+	text-align: center;
+}
+
+.numerica {
+	text-align: right;
+}
+
+.fecha {
+	width: 50px;
+	text-align:right;
+}
+
+.numOperaciones {
+	text-align: center;
+	width: 40px;
+}
+
+.usuario {
+	width:150px;
+}
+
+.fechaHora {
+	width: 100px;
+}
+
+.referenciaBancaria {
+	width: 120px;
+}
+
+.moneda {
+	text-align: right;
+}
+
+.monedaCirbeDeudasColumn {
+	width:148px;
+}
+
+
+/*---------------------------------------------------------------------------------
+ *                  			Botones
+ *---------------------------------------------------------------------------------*/
+.button {
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+
+input[type="reset"],
+input[type="submit"],
+input[type="button"],
+.submit_continuar,
+.submit{
+	cursor: pointer;
+	*cursor: hand;
+	padding: 1px 5px;
+}
+
+.submit_continuar {
+	font-weight: bold;
+}
+
+/*Esta regla no se aplicará en IE7 y anteriores*/
+input[type="image"] {
+	background: transparent none;
+}
+
+/*#---------------------------------------------------------------------------------
+#-                  				TABPANELS
+#---------------------------------------------------------------------------------*/
+#document .ibtim-tabPanel {
+	overflow: hidden; 
+}
+
+#document .ibtim-tabPanel .border_tab-link {
+	border: solid 1px;
+	border-bottom: none;
+	padding: 4px 0 5px 1px;
+	overflow: auto;
+	height: 1%
+}
+
+#document .ibtim-tabPanel a {
+	display:inline-block;
+	background-position: 50% top;
+	background-repeat: repeat-x;
+	border-style: solid;
+	border-width: 1px 1px 0 1px;
+	margin: 1px 0 1px 1px;
+	padding: 3px 10px 4px;
+	text-decoration: none;
+}
+
+#document .ibtim-tabPanel a.rich-tab-active {
+	background-position: 50% 50%;
+}
+
+#document .ibtim-tabPanel-body {
+	margin-top:0;
+}
+
+#document .rich-tab-inactive,
+#document .rich-tab-active {
+	cursor: pointer;
+	 *cursor: hand;
+}
+
+/*#---------------------------------------------------------------------------------
+#-                  		VARIOS
+#---------------------------------------------------------------------------------*/
+.rich-inslider-field {
+	width: 20px;
+}
+
+.infoError {
+color: #006633;	
+}
+
+.semaforoSuperado {
+	font-weight: bold;
+	color: #66CC00;	
+}
+
+.semaforoNoSuperado {
+	font-weight: bold;
+	color: #FF0000;	
+}
+
+.cursiva {
+	font-style: italic;
+}
+
+/*#---------------------------------------------------------------------------------
+#-                  		ALINEACIONES
+#---------------------------------------------------------------------------------*/
+#document .centro {
+	text-align:center;
+}
+
+#document .centrarElemento {
+	margin:0 auto;
+}
+
+#document .derecha {
+	text-align:right;
+	/*float: right;*/
+}
+
+#document .derechaNotaSimple{
+	text-align:right;
+	float: right;	
+}	
+
+#document .derechaElemento {
+	margin-left:auto;
+	margin-right:0;
+}
+
+.izquierda {
+	text-align: left;
+	/*float: left;*/
+}
+
+.arriba {
+	vertical-align: top;
+}
+
+/*#---------------------------------------------------------------------------------
+#-                  		PORCENTAJES
+#---------------------------------------------------------------------------------*/
+#document .p20 {
+	width: 20%;
+}
+
+#document .p33 {
+	width: 33%;
+}
+
+#document .p50 {
+	width: 50%;
+}
+
+#document .p60 {
+	width: 60%;
+}
+
+#document .p66 {
+	width: 66%;
+}
+
+#document .p100 {
+	width: 100%;
+}
+
+#document input.campoRequerido,
+#document select.campoRequerido,
+#document textarea.campoRequerido,
+#document .campoRequerido input,
+#document .campoRequerido select,
+#document .campoRequerido textarea {
+	background: #ffffD2 none;
+}
+
+#document input.campoMalDefinido,
+#document select.campoMalDefinido,
+#document textarea.campoMalDefinido,
+#document .campoMalDefinido input,
+#document .campoMalDefinido select,
+#document .campoMalDefinido textarea {
+	border: 2px solid orange;
+}
+
+div.rich-pmenu-top-group-div {
+	width: 99%;
+}
+
+.rich-tool-tip {
+	width: auto;
+	padding: 10px;
+	cursor: default;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.rich-fileupload-ico-stop,.rich-fileupload-ico-stop-dis,
+.rich-fileupload-ico-add,.rich-fileupload-ico-add-dis,
+.rich-fileupload-ico-clear,.rich-fileupload-ico-clear-dis {
+	background:none;
+}
+
+.titulo {
+	font-family: Arial, sans-serif;
+	font-size: 1.4em;
+}
+
+.rich-filter-input {
+	width: 75%;
+}
+
+#document #sidebar #logos {
+	border: 1px solid #ACBECE;
+	padding: 5px;
+}
+
+/****************************************************************************************
+ *                  			REJILLAS
+ ****************************************************************************************/
+.etiqueta, .input, .output {
+	height: 22px;
+	vertical-align: top;
+}
+
+.outputRight {
+	text-align: right;
+	width: 100px;
+}
+
+.etiqueta {
+	width: 115px;
+	font-weight: bold;
+}
+
+.input {
+	font-weight: normal;
+}
+
+/****************************************************************************************
+ *                  			LISTAS DE DEFINICIONES
+ ****************************************************************************************/
+.rich-definition-term {
+	font-weight: bold;
+}
+
+.rich-definition {
+	margin-left: 5px;
+}
+
+.datosEspeciales {
+	float: none;
+	width: 100%;
+	background: transparent;
+}
+
+.datosEspeciales85 {
+	float: none;
+	width: 85%;
+	background: transparent;
+}
+
+
+.datosEspeciales,.datosEspeciales tr,.datosEspeciales td {
+	border: 0;
+}
+
+.datosEspeciales .rich-definition-term {
+	float: left;
+	clear: both;
+	width: 115px;
+}
+
+#document .especialesLectura  .etiqueta {
+	width: auto;
+	padding-right: 10px;
+}
+
+#document .especialesLectura * {
+	height: auto;
+}
+
+/****************************************************************************************
+ *                  			BOTONES CONFIRMACIÓN / RECHAZO
+ ****************************************************************************************/
+input.botonNegativo,input.botonAfirmativo {
+	padding: 2px 7px;
+	width:180px;
+	font-weight: bold;
+	background-position: 50%;
+	color: #FFF;
+}
+
+input.botonAfirmativo {
+	background-image: url("../img/verde.png");
+	background-color: #0F0;
+}
+
+input.botonNegativo {
+	background-image: url("../img/rojo.png");
+	background-color: #F00;
+}
+
+.destacado {
+	background: #CCC;
+	font-size:1.2em;
+	overflow:hidden;
+	height:1%;
+}
+
+.destacado .output {
+	font-size:1.4em;
+}
+
+.clear {
+	float: none;
+	clear: both;
+}
+
+/*Elimina la flecha de ordenar en el workflow*/
+.tabla_buscador img {
+	display: none;
+}
+
+.tooltip_observacion {
+	max-width: 300px;
+}
+
+/****************************************************************************************
+ *                  			MODAL PANEL TEMPLATE
+ ****************************************************************************************/
+.toolBarModal {
+	margin-top:10px;
+}
+
+.continuarModal,.continuarModal * {
+	font-weight:bold;
+}
+
+#document .scrollableModal .rich-mpnl-body {
+	padding:0;
+}
+
+#document .scrollableModal .rich-mpnl-body div.contenido {
+	float: left;
+	overflow-y:scroll;
+	max-height:400px;
+	width:680px;
+	padding:10px;
+	overflow-x: hidden;
+}
+
+/*Para solucionar problemas con max-height en IE6 */
+* html #document .scrollableModal .rich-mpnl-body div.contenido {
+	height:400px;
+	overflow:scroll;
+	overflow-x: hidden;
+}
+
+/****************************************************************************************
+ *                  			SEXY MODAL PANEL
+ ****************************************************************************************/
+.sexyGrid .tituloSexy {
+	font-size: large;
+}
+
+.sexyError {
+	color: #F00;
+}
+
+.sexyHelp {
+	color: #0F0;
+}
+
+.sexyInfo {
+	color: #578BB8;
+}
+
+.sexyWarn {
+	color: #F70;
+}
+
+.desconectar .rich-toolbar-item,
+.textoCabecera .rich-toolbar-item {
+	padding:2px 5px;
+}
+
+/*Define el estilo del panel del include toolTipFechasCirbe*/
+.toolTipFechasCirbe {
+	width: 220px;
+}
+
+.rich-spacer {
+	display: block;
+	clear: both;
+}
+
+#document .datosPanel {
+	padding: 15px 0;
+}
+
+#document .richPanelButton {
+	margin-left: 15px;
+}
+
+#document .numerosRojos,#document #content .numerosRojos {
+	font-weight: bold;
+	color: red;
+}
+
+#document .numerosVerdes,#document #content .numerosVerdes {
+	font-weight: bold;
+	color: green;
+}
+
+.conceptoNoLiquidable{
+	font-weight: bold;
+	color: blue;
+}
+
+.conceptoContabilizado{
+	font-weight: bold;
+	color: blue;
+}
+
+#document .sinPadding {
+	padding:0;
+}
+
+#document .cabeceraIzquierda {
+	text-align:left;
+}
+
+#document .cabeceraCentro {
+	text-align:center;
+}
+
+#document #content .aumentar {
+	font-weight:bolder;
+}
+
+/*SEPARACION BOTONES*/
+*.separacionBoton{
+	margin:10px 20px;
+}
+
+/*NUEVOS ENLACES DE PANTALLA PRINCIPAL*/
+#document #panelPrincipal .panelMain{
+	display:block;
+	text-align:left;
+	padding:0;
+	font-size:13px;
+}
+
+#document #panelPrincipal .enlaceMain{
+	display:block;
+	text-align:center;
+	padding:2px 0;
+	font-size:13px;
+	margin-top:8px;
+	margin-left: 15px;
+	margin-right: 15px;
+	font-weight:bold;
+}
+
+#buscadorFormAnterior select{
+	width: 170px;
+}
+
+#panelInformes{
+	border-top:0px;	
+}
+
+#panelMenuInformes *{
+	margin-top:0px;
+	padding:4px 0;
+	font-size: 1.05em;
+}
+
+/*Histórico del expediente*/
+#document .historicoExpediente a, 
+#document .historicoExpediente span {
+	display:block;
+	text-decoration:none;
+	font-weight:bold;
+	cursor: pointer;
+	*cursor: hand;
+}
+
+#document .historicoExpediente .fila:hover * {
+	color:#0D5798;
+}
+
+#document .historicoExpediente .rich-panel-body, 
+#document .historicoExpediente .rich-stglpanel-body,
+#document .grupoEnlaces .rich-panel-body,
+#document .grupoEnlaces .rich-stglpanel-body
+ {
+	padding:0;
+}
+
+
+#document .historicoExpediente .rich-stglpanel {
+	margin:0;
+}
+
+#document #superior .rich-table-cell,
+#document #superiorAsistencia .rich-table-cell,
+#document .filaSkinable .rich-table-cell,
+#document #configuracionChija .rich-table-cell{
+	padding:0;
+	border-spacing:0;
+}
+
+#document .filaSkinable .rich-table-cell span {
+	padding:4px;
+	display:block;
+}
+
+#document #seleccionCentrosForm .rich-table-cell,
+#document #seleccionProyectosModalForm .rich-table-cell
+ {
+	padding:0px;
+}
+
+
+#document #superior .rich-table-cell span,
+#document #configuracionChija .rich-table-cell span{
+	padding-top:17px;
+	padding-bottom:17px;
+	display:block;
+}
+
+#document #superiorAsistencia .rich-table-cell span{
+	padding-top:6px;
+	padding-bottom:6px;
+	display:block;
+}
+
+/* Se define el alto de las celdas skinables para solucionar los problemas
+ * al aplicar el estilo a celdas vacías. ATENCIÓN: Esto es peligroso ya
+ * que solo funcionará correctamente con el tamaño actual de fuente.
+ */
+#document .filaSkinable .rich-table-cell span {
+	height:14px;
+}
+
+#document .columnas10{
+	width: 10%;
+}
+
+#document .columnas11{
+	width: 9.09%;
+}
+
+#document .columnas12{
+	width: 8.33%;
+}
+
+#document .columnas9{
+	width: 11.11%;
+}
+
+#document .columnas8{
+	width: 12.5%;
+}
+
+#document .columnas7{
+	width: 14.29%;
+}
+
+#document .columnas13{
+	width: 7.69%;
+}
+
+#document .letra80{
+	font-size:0.8em;
+}
+
+#document .letra90{
+	font-size:0.9em;
+}
+
+#document .letra95{
+	font-size:0.95em;
+}
+
+#document .letra70{
+	font-size:0.7em;
+}
+
+#document .letra65{
+	font-size:0.65em;
+}
+
+#document .letra50{
+	font-size:0.5em;
+}
+
+#document .letra85{
+	font-size:0.85em;
+}
+
+#document .letra75{
+	font-size:0.75em;
+}
+
+#document .tablaSinBorde{
+	border:0;	
+}
+
+/*ScrollDataTable 
+-row(Para fila normal no seleccionada por defecto) 
+-row-selected(para seleccionadas) 
+-row-active(eliminada porque al limpiar y recargar se quedaba marcada la última activa)*/
+.rich-sdt-row {
+	color:#8DB7F3;
+}
+
+.rich-sdt-row-selected {
+	color:#CD5C5C;
+	background-color:#ECF4FE;
+}
+/*Fin ScrollDataTable*/ 
+
+* .altura3{
+	height:50px;
+}
+
+#document .rich-list-item {
+	list-style:none;
+}
+
+*  .botonExcel:hover{
+		background-color:transparent;
+		border:0px;
+}
+
+* .fondoAzul{
+	background:#EAF0F8;
+	color:#000;
+}
+
+#document .selectDataTable td {
+	font-size:1.5em;
+}
+
+#document .columnaPanelesIguales {
+	border:1px solid #C0C0C0;
+	padding:0;
+	vertical-align:top;
+}
+
+#document .columnaPanelesIguales .rich-panel {
+	border:0;
+	margin-top:0;
+} 
+
+* .column_sin_padding{
+	padding:0px;
+}
+
+.entorno {
+	padding:2px 4px;
+}
+
+.entorno .label {
+	padding-right:3px;
+}
+
+/* Solución al bug que se produce cuando se visualiza un tooltip en IE6 */
+.rich-tool-tip {
+	*width:240px;
+}
+
+.rich-table-firstrow td {
+	border-top:0 
+}
+
+.tablaGruposDocumentos {
+	width: 220px;
+	border: 0;
+}
+
+
+.tablaDocumentos {
+	width: 350px;
+	border: 0;
+}
+
+.texto_importante{
+	font-weight: bold;
+	font-size: small;	
+}
+
+.enlacesPrincipales{
+	display: block;
+	text-align: center;
+	font-size: 15px;
+	color: yellow;
+	border: 0px;
+	padding:5px 0px;
+}
+
+.sinmargin{
+	margin:0px;
+}
+
+.sinpadding{
+	padding:0px;
+}
+
+.sinborder{
+	border:0px;
+	border-style:none;
+}
+
+.calendar-date-gris{
+	color:black;
+	background-color:gray;
+	font-size: 16px;
+}
+
+.calendar-date-verde{
+	color:black;
+	background-color:green;
+	font-size: 16px;
+}
+
+.calendar-date-rojo{
+	color:black;
+	background-color:red;
+	font-size: 16px;
+}
+
+.calendar-date-azul{
+	color:black;
+	background-color:blue;
+	font-size: 16px;
+}
+
+.calendar-date-amarillo{
+	color:black;
+	background-color:yellow;
+	font-size: 16px;
+}
+
+.calendar-date-naranja-claro{
+	color:black;
+	background-color:orange;
+	font-size: 16px;
+}
+
+.calendar-date-naranja-oscuro{
+	color:black;
+	background-color:#FF8C00;
+	font-size: 16px;
+}
+
+.altura_barra_asistencia{
+	height: 12px;
+	display: block;
+}
+
+.bloque_hora_calendario{
+	text-align:center;
+	display: block;
+}
+
+#document .fila_mismo_notario{
+	background:#6faaf2;
+	color:white;
+}
+/* estilos leyenda del calendario */
+.leyendaCalendario{
+	display: block;
+	width: 10px;
+	height: 10px;
+}
+
+.leyendaCalendarioGris{
+	background-color: gray;
+}
+
+.leyendaCalendarioRojo{
+	background-color: red;	
+}
+
+.leyendaCalendarioVerde{
+	background-color: green;
+}
+
+.leyendaCalendarioAmarillo{
+	background-color: yellow;
+}
+
+.leyendaCalendarioAzul{
+	background-color: #0000FF;	
+}
+
+.leyendaCalendarioNaranjaClaro{
+	background-color: #FFA500;
+}
+
+.leyendaCalendarioNaranjaOscuro{
+	background-color: #FF8C00;	
+}
+
+/* Fin leyenda calendario */
+
+/* Dia */
+#document #superior .rich-calendar-cell,
+#document #superior .rich-calendar-select,
+{
+	background-color: #F3F2F2;
+}
+
+/* Dia vacaciones*/
+#document #superior .rich-calendar-holly{
+	background-color: #CCCCCC;	
+	color: black;	
+}
+
+/* Dia que pasas por encima*/
+#document #superior .rich-calendar-hover,
+#document #superior .rich-calendar-today:hover,
+#document #admin .rich-calendar-hover, 
+#document #admin .rich-calendar-today:hover,
+#document #agendaFirma .rich-calendar-hover, 
+#document #agendaFirma .rich-calendar-today:hover{
+	background: #FFFF88;	
+}
+
+/* Dia de hoy*/
+#document #superior .rich-calendar-today{
+	background-color: #EAF0F8;	
+	color: black;	
+}
+
+#document #superior .rich-calendar-tool-btn-hover,
+#document #admin .rich-calendar-tool-btn-hover,
+#document #agendaFirma .rich-calendar-tool-btn-hover{
+	background-color: #1F4986;	
+	color: #FFFF88;
+	border:0px;	
+}
+
+#document #superior .rich-calendar-editor-btn,
+#document #superior .rich-calendar-editor-btn-selected,
+#document #admin .rich-calendar-editor-btn-selected,
+#document #admin .rich-calendar-editor-btn,
+#document #agendaFirma .rich-calendar-editor-btn-selected,
+#document #agendaFirma .rich-calendar-editor-btn
+
+{
+	width:100px;
+	border: 0px;
+	
+}
+
+
+#document #superior .rich-calendar-time-btn,
+#document #admin .rich-calendar-time-btn,
+#document #agendaFirma .rich-calendar-time-btn{
+	width:100px;
+	background-color: #1F4986;
+	color: white;
+}
+
+#document #superior .rich-calendar-date-layout-ok,
+#document #superior .rich-calendar-date-layout-cancel,
+#document #admin .rich-calendar-date-layout-ok, 
+#document #admin .rich-calendar-date-layout-cancel,
+#document #agendaFirma .rich-calendar-date-layout-ok,
+#document #agendaFirma .rich-calendar-date-layout-cancel{
+	background-color: #ffffff;
+}
+
+
+
+#document #superior .numeroAgendas{
+	font-size: 1.3em;
+	display:block;
+	padding-top:15px;
+}
+
+#document #superior .panelNumeroDia{
+	height: 30px; 
+}
+
+#document #superior .numeroDia{
+	display:block;
+	color:white;
+	background-color:#666666;
+}
+
+.impuestoDestacado{
+	color:red;
+	text-align:center;
+	font-size:1.7em;
+	font-style:italic;
+	font-weight:bold;
+	background-color: #BDBDBD;
+}
+
+.operacionDestacado{
+	color:black;
+	text-align:center;
+	font-size:1.5em;
+	font-style:italic;
+	font-weight:bold;
+}
+
+.bienDestacado{
+	color:black;
+	text-align:center;
+	font-size:1.3em;
+	font-style:italic;
+	font-weight:bold;
+}
+
+.centraAltura{
+	vertical-align: middle;	
+}
+
+.mayuscula{ 
+	text-transform: uppercase;	
+}
+
+.enlaceActivoMenuExpediente{
+	background-color: #B9E7FE
+}
+
+
+/* Notarias*/
+
+.column_Delegacion {
+	width: 120px;
+	text-align: center;
+}
+
+.column_usuario {
+	width: 120px;
+	text-align: center;
+}
+
+.column_CA_CS {
+	width: 40px;
+	text-align: center;
+}
+
+.column_BotonRecoger {
+	width: 30px;
+	text-align: center;
+}
+
+.column_Operacion_Concat {
+	width: 80px;
+	text-align: center;
+}
+
+.column_Interviniente{
+	width:  215px;	
+	text-align: left;
+}
+
+.column_Bien{
+	width:  180px;	
+	text-align: center;
+}
+
+.column_Importe{
+	width:  30px;	
+	text-align: center;
+}
+
+.column_FacturaId{
+	width:  50px;	
+	text-align: center;
+}
+
+.column_SiNo{
+	width:  20px;	
+	text-align: center;
+}
+
+.column_Observaciones{
+	width:  200px;	
+	text-align: center;
+}
+
+.column_Observaciones{
+	width:  200px;	
+	text-align: center;
+}
+
+#document .seleccionEncima:hover{
+	background-color:#FFFF88;
+	cursor:pointer;
+	*cursor:hand;
+}
+
+.column_fondoClasico{
+	background:#EAF0F8;
+}
+
+#document #panelPrincipal .menuGroupN1{
+	margin-top:10px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+}
+
+#document #panelPrincipal .menuItemN1{
+	
+}
+
+#document #panelPrincipal .menuItemN1:hover{
+	background:#FFFF88;	
+}
+
+#document #panelPrincipal .menuGroupN2{
+	border:0px;
+	background:#B5CCEE;
+	font-size: 1.2em;
+	padding-top:6px;
+	padding-bottom:6px;
+}
+
+#document #panelPrincipal .menuItemN2{
+	border:0px;
+	background:#EAF0F8;
+	font-weight: bold;
+	font-size: 1.2em;
+	padding-top:6px;
+	padding-bottom:6px;
+}
+
+#document #panelPrincipal .menuItemN2:hover{
+	background:#FFFF88;	
+}
+
+#document #panelPrincipal .menuItemN2:LINK{
+	background:#FFFF88;	
+}
+
+#document #panelPrincipal .menuGroupN3{
+	border:0px;
+	background:#D6E3F7;
+	font-size: 1.1em;
+	padding-top:4px;
+	padding-bottom:4px;
+}
+
+#document #panelPrincipal .menuItemN3{
+	border:0px;
+	background:#EAF0F8;
+	font-size: 1.1em;
+	font-weight: bold;
+	padding-top:4px;
+	padding-bottom:4px;
+}
+
+#document #panelPrincipal .menuItemN3:hover{
+	background:#FFFF88;	
+}
+
+#document #panelPrincipal .menuGroupN4{
+	border:0px;
+	background:#D6E3F7;
+	font-size: 1em;
+	padding-top:4px;
+	padding-bottom:4px;
+}
+
+#document #panelPrincipal .menuItemN4{
+	border:0px;
+	background:#EAF0F8;
+	font-size: 1.1em;
+	padding-top:4px;
+	padding-bottom:4px;
+}
+
+#document #panelPrincipal .menuItemN4:hover{
+	background:#FFFF88;	
+}
+
+#document #panelPrincipal .menuGroupN5{
+	border:0px;
+	background:#D6E3F7;
+	font-size: 1em;
+	padding-top:2px;
+	padding-bottom:2px;
+}
+
+#document #panelPrincipal .menuItemN5{
+	border:0px;
+	background:#EAF0F8;
+	font-size: 1em;
+	padding-top:2px;
+	padding-bottom:2px;
+}
+
+#document #panelPrincipal .menuItemN5:hover{
+	background:#FFFF88;	
+}
+
+#document #panelPrincipal .menuItemSeleccionado{
+	display:inline-block;
+	overflow: hidden;
+	height: 16px;
+	background-repeat: no-repeat;
+	background-image: url(../img/menuPrincipal/seleccionada.png);
+}
+
+#document #panelPrincipal .rich-pmenu-top-group-div,
+#document #panelPrincipal div.rich-pmenu-top-group-div{
+	border:0px;
+	width: 100%;
+}
+
+#document .filaPanelSeleccionada{
+	background:#B5CCEE;
+	font-weight: bold;
+}
+#document .orangeIng{
+	background:#FFA500;
+}
+
+#document .fondoVerde{
+	background:#A0BC98;
+}
+
+#document .fondoRojo{
+	background:#E47D7E;
+}
+
+#document .fondoGris{
+	background:#EEEEEE;
+}
+
+#document .fondoAmarillo{
+	background:#E1D15A;
+}
+
+#document .fondoAzulon{
+	background:#8FB1C6;
+}
+
+.tablaDatosFinancieros{
+	border:#000 solid 3px;
+	padding:0px !important;
+}
+
+.tablaDatosFinancieros tr:first-child{
+	background:#B9E7FE;
+}
+
+.tablaDatosFinancieros tr{
+	text-align: center;
+}
+
+.tablaDatosFinancieros tr td{
+	border-bottom:#000 solid 1px;
+	border-left:#000 solid 1px;
+	padding:0px;
+	margin:0px;
+	text-align: center;
+}
+
+.tablaDatosFinancieros .label{
+	display:none !important;
+}
+
+.tablaDatosFinancieros .output{
+	background:#F3F2F2 !important;
+	border: 0px;
+}
+
+#document .anchoColumna8{
+	width:12.5%;
+}
+
+#document .anchoColumna7{
+	width:14.3%;
+}
+
+#document .anchoColumna6{
+	width:16.6%;
+}
+
+#document .anchoColumna5{
+	width:20%;
+}
+
+#document .anchoColumna4{
+	width:25%;
+}
+
+#document .anchoColumna3{
+	width:33.3%;
+}
+
+#document .anchoColumna2{
+	width:50%;
+}
+
+#document .anchoColumna1{
+	width:100%;
+}
+
+#document .registroSeleccionado{
+	background: #CDEB8B;
+}
+
+#document .registroNoSeleccionado{
+	background: white;
+}
+
+#document .registroNoSeleccionado:hover{
+	background-color: #FFFF88;
+}
+
+#document .letraCursiva{
+	font-style:italic;
+}
+
+#document .letraMayuscula{
+	text-transform: uppercase;
+}
+
+#document .letra08{
+	font-size:0.8em;
+}
+
+#document .multiSeleccionAlturaBanco{
+	height:100px;
+}
+
+#document .multiSeleccionAlturaCodDif{
+	height:50px;
+}
+
+#document .multiSeleccionAlturaCentro{
+	height:35px;
+}
+
+#document .multiSeleccionImagenBanco{
+	width: 135px; 
+	height: 54px;
+}
+
+.column_ws_value{
+	width: 100%;
+}
+
+body#document .column_ws_value textarea[readonly="readonly"] {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #CCCCCC;
+    background-image: none;
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: auto auto;
+    cursor: default;
+    height: 16px;
+    width: 120px;
+}
+
+.rich-tree-node-children {
+	margin-left: 8px !important;
+	padding-left: 10px !important;
+	
+}
+
+#document .advertencia {
+	color: red;
+	vertical-align: middle;
+	font-size: 12px
+}
+
+.column_NombreLargo {
+	width: 550px;
+	text-align: left;
+}
+

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	template="/pages/layout/template.xhtml">
+	<ui:define name="content">
+		<h:form>
+			<p:panelGrid columns="4">
+				<p:outputLabel value="#{messages.name}"></p:outputLabel>
+				<p:inputText value="#{restFulClientAction.client}" />
+				<p:commandButton value="#{messages.sendGreeting}"
+					actionListener="#{restFulClientAction.sendGreeting}"
+					update="clientResponse" />
+				<ui:include src="/pages/components/simpleText.xhtml">
+					<ui:param name="id" value="clientResponse" />
+					<ui:param name="label" value="#{messages.result}" />
+					<ui:param name="bean" value="#{restFulClientAction}" />
+					<ui:param name="property" value="clientResponse" />
+					<ui:param name="disabled" value="true" />
+				</ui:include>
+			</p:panelGrid>
+			<p:panelGrid columns="3">
+				<p:outputLabel value="#{messages.stockName}"></p:outputLabel>
+				<p:inputText value="#{restFulStockClientAction.stockName}" />
+				<p:commandButton value="Testing"
+						actionListener="#{restFulStockClientAction.lookUpStockInformation}" update="tableResults"/>
+			</p:panelGrid>
+			<p:dataTable var="var" value="#{restFulStockClientAction.stockSymbolList}" id="tableResults">	
+				<p:column headerText="#{messages.symbol}">
+					<h:outputText value="#{var.symbol}" />
+				</p:column>
+				<p:column headerText="#{messages.name}">
+					<h:outputText value="#{var.name}" />
+				</p:column>
+				<p:column headerText="#{messages.exchange}">
+					<h:outputText value="#{var.exchange}" />
+				</p:column>
+			</p:dataTable>		
+		</h:form>
+	</ui:define>
+</ui:composition>
