@@ -6,7 +6,7 @@
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	template="/pages/layout/template.xhtml">
 	<ui:define name="content">
-		<h:form>
+		<h:form >
 			<p:panelGrid columns="3">
 				<p:outputLabel value="#{messages.stockName}"></p:outputLabel>
 				<p:inputText value="#{restFulStockClientAction.stockName}" />
@@ -16,7 +16,7 @@
 			<p:dataTable var="var" value="#{restFulStockClientAction.stockSymbolList}" id="tableResults" 
 				selectionMode="single" selection="#{restFulStockClientAction.chosenStock}" rowKey="#{var.name}"
 				>	
-				<p:ajax event="rowSelect" listener="#{restFulStockClientAction.onRowSelect}" update="tableResults"  />
+				<p:ajax event="rowSelect" listener="#{restFulStockClientAction.onRowSelect}" update=":#{p:component('panelResult')}"  />
 				<p:column headerText="#{messages.symbol}">
 					<h:outputText value="#{var.symbol}" />
 				</p:column>
@@ -27,6 +27,10 @@
 					<h:outputText value="#{var.exchange}" />
 				</p:column>
 			</p:dataTable>		
+			
+			<p:panelGrid columns="1" id="panelResult">
+			</p:panelGrid>
+			
 		</h:form>
 	</ui:define>
 </ui:composition>
