@@ -9,7 +9,7 @@ import org.springframework.beans.factory.config.Scope;
 
 public class ViewScope implements Scope {
 
-	public Object get(String name, ObjectFactory objectFactory) {
+	public Object get(String name, ObjectFactory<?> objectFactory) {
 		Map<String, Object> viewMap = FacesContext.getCurrentInstance()
 				.getViewRoot().getViewMap();
 

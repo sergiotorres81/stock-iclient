@@ -21,6 +21,7 @@
 		<jaxb.version>2.2.2</jaxb.version>
 		<spring.ws.version>2.1.4.RELEASE</spring.ws.version>
 		<jackson.version>1.9.10</jackson.version>
+		<output.deploy.folder>/home/sergiot/Work/apache-tomcat-7.0.54/webapps</output.deploy.folder>
 	</properties>
 
 	<build>
@@ -32,8 +33,7 @@
 				<version>2.4</version>
 				<configuration>
 					<warName>iCliente</warName>
-					<!-- <outputDirectory>D:\tomcat\apache-tomcat-7.0.30\webapps\</outputDirectory> -->
-					<outputDirectory>C:\work\tomcat\apache-tomcat-7.0.54\webapps\</outputDirectory>
+					<outputDirectory>${output.deploy.folder}</outputDirectory>
 				</configuration>
 			</plugin>
 
@@ -64,7 +64,7 @@
 				<configuration>
 					<filesets>
 						<fileset>
-							<directory>C:\work\tomcat\apache-tomcat-7.0.54\webapps\</directory>
+							<directory>${output.deploy.folder}</directory>
 							<includes>
 								<include>iCliente/**</include>
 							</includes>
