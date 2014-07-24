@@ -6,17 +6,22 @@
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	template="/pages/layout/template.xhtml">
 	<ui:define name="content">
-		<h:form >
+		<h:form>
 			<p:panelGrid columns="3">
 				<p:outputLabel value="#{messages.stockName}"></p:outputLabel>
 				<p:inputText value="#{restFulStockClientAction.stockName}" />
 				<p:commandButton value="#{messages.findSymbol}"
-						actionListener="#{restFulStockClientAction.lookUpStockInformationListener}" update="tableResults"/>
+					actionListener="#{restFulStockClientAction.lookUpStockInformationListener}"
+					update="tableResults" />
 			</p:panelGrid>
-			<p:dataTable var="var" value="#{restFulStockClientAction.stockSymbolList}" id="tableResults" 
-				selectionMode="single" selection="#{restFulStockClientAction.chosenStock}" rowKey="#{var.name}"
-				>	
-				<p:ajax event="rowSelect" listener="#{restFulStockClientAction.onRowSelect}" update=":#{p:component('panelResult')}"  />
+			<p:dataTable var="var"
+				value="#{restFulStockClientAction.stockSymbolList}"
+				id="tableResults" selectionMode="single"
+				selection="#{restFulStockClientAction.chosenStock}"
+				rowKey="#{var.name}">
+				<p:ajax event="rowSelect"
+					listener="#{restFulStockClientAction.onRowSelect}"
+					update=":#{p:component('panelResult')}" />
 				<p:column headerText="#{messages.symbol}">
 					<h:outputText value="#{var.symbol}" />
 				</p:column>
@@ -26,11 +31,127 @@
 				<p:column headerText="#{messages.exchange}">
 					<h:outputText value="#{var.exchange}" />
 				</p:column>
-			</p:dataTable>		
-			
+			</p:dataTable>
+
 			<p:panelGrid columns="1" id="panelResult">
+				<ui:include src="/pages/components/simpleText.xhtml">
+					<ui:param name="id" value="statusId" />
+					<ui:param name="label" value="#{messages.status}" />
+					<ui:param name="bean"
+						value="#{restFulStockClientAction.stockQuote}" />
+					<ui:param name="property" value="status" />
+					<ui:param name="disabled" value="true" />
+				</ui:include>
+				<ui:include src="/pages/components/simpleText.xhtml">
+					<ui:param name="id" value="nameId" />
+					<ui:param name="label" value="#{messages.name}" />
+					<ui:param name="bean"
+						value="#{restFulStockClientAction.stockQuote}" />
+					<ui:param name="property" value="name" />
+					<ui:param name="disabled" value="true" />
+				</ui:include>
+				<ui:include src="/pages/components/simpleText.xhtml">
+					<ui:param name="id" value="symbolId" />
+					<ui:param name="label" value="#{messages.symbol}" />
+					<ui:param name="bean"
+						value="#{restFulStockClientAction.stockQuote}" />
+					<ui:param name="property" value="symbol" />
+					<ui:param name="disabled" value="true" />
+				</ui:include>
+				<ui:include src="/pages/components/simpleText.xhtml">
+					<ui:param name="id" value="lastPriceId" />
+					<ui:param name="label" value="#{messages.lastPrice}" />
+					<ui:param name="bean"
+						value="#{restFulStockClientAction.stockQuote}" />
+					<ui:param name="property" value="lastPrice" />
+					<ui:param name="disabled" value="true" />
+				</ui:include>
+
+				<ui:include src="/pages/components/simpleText.xhtml">
+					<ui:param name="id" value="changeId" />
+					<ui:param name="label" value="#{messages.change}" />
+					<ui:param name="bean"
+						value="#{restFulStockClientAction.stockQuote}" />
+					<ui:param name="property" value="change" />
+					<ui:param name="disabled" value="true" />
+				</ui:include>
+				<ui:include src="/pages/components/simpleText.xhtml">
+					<ui:param name="id" value="changePercentId" />
+					<ui:param name="label" value="#{messages.changePercent}" />
+					<ui:param name="bean"
+						value="#{restFulStockClientAction.stockQuote}" />
+					<ui:param name="property" value="changePercent" />
+					<ui:param name="disabled" value="true" />
+				</ui:include>
+				<ui:include src="/pages/components/simpleText.xhtml">
+					<ui:param name="id" value="timeStampId" />
+					<ui:param name="label" value="#{messages.timeStamp}" />
+					<ui:param name="bean"
+						value="#{restFulStockClientAction.stockQuote}" />
+					<ui:param name="property" value="timeStamp" />
+					<ui:param name="disabled" value="true" />
+				</ui:include>
+
+				<ui:include src="/pages/components/simpleText.xhtml">
+					<ui:param name="id" value="marketCapId" />
+					<ui:param name="label" value="#{messages.marketCap}" />
+					<ui:param name="bean"
+						value="#{restFulStockClientAction.stockQuote}" />
+					<ui:param name="property" value="marketCap" />
+					<ui:param name="disabled" value="true" />
+				</ui:include>
+				<ui:include src="/pages/components/simpleText.xhtml">
+					<ui:param name="id" value="volumeId" />
+					<ui:param name="label" value="#{messages.volume}" />
+					<ui:param name="bean"
+						value="#{restFulStockClientAction.stockQuote}" />
+					<ui:param name="property" value="volume" />
+					<ui:param name="disabled" value="true" />
+				</ui:include>
+				<ui:include src="/pages/components/simpleText.xhtml">
+					<ui:param name="id" value="changeYTDId" />
+					<ui:param name="label" value="#{messages.changeYTD}" />
+					<ui:param name="bean"
+						value="#{restFulStockClientAction.stockQuote}" />
+					<ui:param name="property" value="changeYTD" />
+					<ui:param name="disabled" value="true" />
+				</ui:include>
+
+
+				<ui:include src="/pages/components/simpleText.xhtml">
+					<ui:param name="id" value="changePercentYTDId" />
+					<ui:param name="label" value="#{messages.changePercentYTD}" />
+					<ui:param name="bean"
+						value="#{restFulStockClientAction.stockQuote}" />
+					<ui:param name="property" value="changePercentYTD" />
+					<ui:param name="disabled" value="true" />
+				</ui:include>
+				<ui:include src="/pages/components/simpleText.xhtml">
+					<ui:param name="id" value="highId" />
+					<ui:param name="label" value="#{messages.high}" />
+					<ui:param name="bean"
+						value="#{restFulStockClientAction.stockQuote}" />
+					<ui:param name="property" value="high" />
+					<ui:param name="disabled" value="true" />
+				</ui:include>
+				<ui:include src="/pages/components/simpleText.xhtml">
+					<ui:param name="id" value="lowId" />
+					<ui:param name="label" value="#{messages.low}" />
+					<ui:param name="bean"
+						value="#{restFulStockClientAction.stockQuote}" />
+					<ui:param name="property" value="low" />
+					<ui:param name="disabled" value="true" />
+				</ui:include>
+				<ui:include src="/pages/components/simpleText.xhtml">
+					<ui:param name="id" value="openId" />
+					<ui:param name="label" value="#{messages.open}" />
+					<ui:param name="bean"
+						value="#{restFulStockClientAction.stockQuote}" />
+					<ui:param name="property" value="open" />
+					<ui:param name="disabled" value="true" />
+				</ui:include>
 			</p:panelGrid>
-			
+
 		</h:form>
 	</ui:define>
 </ui:composition>
